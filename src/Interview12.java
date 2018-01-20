@@ -24,7 +24,7 @@ public class Interview12 {
 
     private void helper(char[] nums, int index, int length) {
         if (index == length) {
-            print(nums);
+            print(nums, length);
             return;
         }
 
@@ -35,8 +35,8 @@ public class Interview12 {
         }
     }
 
-    private void print(char[] nums) {
-        for (int i = 0; i < nums.length; i++) {
+    private void print(char[] nums, int length) {
+        for (int i = 0; i < length; i++) {
             System.out.print(nums[i] + " ");
         }
 
