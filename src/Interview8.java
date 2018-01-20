@@ -15,6 +15,16 @@ public class Interview8 {
                 return nums[l];
             }
 
+            if (nums[l] == nums[mid] || nums[l] == nums[r]) {
+                l++;
+                continue;
+            }
+
+            if (nums[mid] == nums[r]) {
+                r--;
+                continue;
+            }
+
             if (nums[l] <= nums[mid]) {
                 l = mid + 1;
             } else {
