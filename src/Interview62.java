@@ -50,12 +50,16 @@ public class Interview62 {
     }
 
     private TreeNode deserialize(Queue<String> q) {
-        if (q.isEmpty() || "#".equals(q.peek())) {
-            q.poll();
+        if (q.isEmpty()) {
             return null;
         }
 
-        TreeNode root = new TreeNode(Integer.parseInt(q.poll()));
+        String cur = q.poll();
+        if ("#".equals(cur)) {
+            return null;
+        }
+
+        TreeNode root = new TreeNode(Integer.parseInt(cur));
         root.left = deserialize(q);
         root.right = deserialize(q);
 
