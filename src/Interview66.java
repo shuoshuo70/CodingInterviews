@@ -5,7 +5,7 @@ public class Interview66 {
     public static void main(String[] args) {
         Interview66 solution = new Interview66();
         char[][] matrix = {{'a', 'b', 'c', 'e'}, {'s', 'f', 'c', 's'}, {'a', 'd', 'e', 'e'}};
-        System.out.println(solution.canReach(matrix, "bcced"));
+        System.out.println(solution.canReach(matrix, "bce"));
     }
 
     public boolean canReach(char[][] matrix, String s) {
@@ -32,12 +32,12 @@ public class Interview66 {
     }
 
     private boolean dfs(char[][] matrix, int i, int j, String s, int index, boolean[][] visited) {
-        if (!isValid(matrix, i, j) || visited[i][j]) {
-            return false;
-        }
-
         if (index == s.length()) {
             return true;
+        }
+
+        if (!isValid(matrix, i, j) || visited[i][j]) {
+            return false;
         }
 
         if (matrix[i][j] != s.charAt(index)) {
