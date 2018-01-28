@@ -36,11 +36,7 @@ public class Interview66 {
             return true;
         }
 
-        if (!isValid(matrix, i, j) || visited[i][j]) {
-            return false;
-        }
-
-        if (matrix[i][j] != s.charAt(index)) {
+        if (!isValid(matrix, i, j) || visited[i][j] || matrix[i][j] != s.charAt(index)) {
             return false;
         }
 
