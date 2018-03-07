@@ -17,6 +17,10 @@ public class Interview67 {
             return count;
         }
 
+        if (visited[i][j]) {
+            return count;
+        }
+
         visited[i][j] = true;
         count++;
 
